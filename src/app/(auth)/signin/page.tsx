@@ -73,7 +73,7 @@ const SignInPage = () => {
             </Button>
             <div className="w-full">
               <Link
-                href="/forgot-password"
+                href="/forget-password"
                 className="text-sm text-gray-500 hover:text-red-700 transition-colors"
               >
                 পাসওয়ার্ড ভুলে গেছেন?

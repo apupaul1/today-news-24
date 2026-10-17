@@ -30,18 +30,29 @@ const SignupPage = () => {
       email: userData.email,
       password: userData.password,
       image: userData.image,
-      callbackURL: "http://localhost:3000",
+      callbackURL: "/",
     });
 
-    if (data) {
-      toast.success("Account created successfully");
+    console.log({ data, error });
 
-      router.push("/");
-    }
+    // if (data?.token === null) {
+    //   toast.success("Account verfication link send to your email");
+    //   router.push("/pending-page");
+    // }
+
+    // if (data?.token) {
+    //   toast.success("Account created successfully");
+    //   router.push("/");
+    // }
 
     if (error) {
       toast.danger(error.message);
       return;
+    }
+
+    if (data) {
+      toast.success("Verification link sent to your email");
+      router.push("/pending-page");
     }
   };
 

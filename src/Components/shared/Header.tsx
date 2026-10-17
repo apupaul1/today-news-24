@@ -68,7 +68,7 @@ const Header = () => {
                             <Link href={"/change-password"}>Change Password</Link>
                           </dt>
                           <dt>
-                            <Link href={"/"}>Forget Password</Link>
+                            <Link href={"/forget-password"}>Forget Password</Link>
                           </dt>
                         </dl>
                       </Popover.Dialog>
